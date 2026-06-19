@@ -11,7 +11,7 @@ hard_gates:           # binary pass/fail — BLOCK render
   required_sections: [] # list[str] — must be present, in order
   banned_phrases: []    # list[str] — filler stems that read as filter-out
   no_fact_outside_core: # bool — every line rests on core; a number rests on evidence bank
-  acronyms_spelled_once:# bool — "SEO (Search Engine Optimization)" once
+  acronyms_spelled_once:  # bool — "SEO (Search Engine Optimization)" once
 
 soft_rubric:          # 0-100 weighted score — REPORT, does not block
   # key: weight (int). Each maps to a Priority signal / Keyword mirror item in the prose.
