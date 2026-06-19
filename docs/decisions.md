@@ -24,3 +24,9 @@ Why it's built this way. One line per turn.
   Loose dependency (documented), not a submodule at the start.
 - **Method (`.arcs/`) ≠ product.** `.arcs` tracks the work; this repo is the result/system.
 - **Personal data is not in git.** The system design is public; your facts are not.
+- **Spec form — hybrid (prose + `<level>.rules.yaml`).** Prose carries why; yaml carries
+  machine-checkable gates. Yaml is fine here (unlike the core) because spec gates are not
+  fabrication hooks — they are checkable by nature.
+- **Two-tier enforcement.** `hard_gates` block render (binary); `soft_rubric` scores 0-100 (advisory).
+- **Updater = versioning + research-refresh, human-approved.** Re-run research → diff → approve →
+  bump. Callback-rate is a coarse trigger, not an auto-tuner (volume too low for significance).

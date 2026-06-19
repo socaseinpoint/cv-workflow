@@ -75,6 +75,26 @@ Spec is parameterized by target level: `@master → @title → @company`. This i
 - **for the CV** — what to surface from what you already have;
 - **for growth** — what's missing → what to learn/build (a career roadmap).
 
+## Spec form — hybrid (prose + machine rules)
+
+Each spec level is a PAIR of files in `data/spec/`:
+- `<level>.md` — prose, the 6-part skeleton (Message / Required sections / Keyword mirror /
+  Priority signals / Anti-patterns / What I am not), human-readable with rationale.
+- `<level>.rules.yaml` — extracted machine-checkable layer, two tiers:
+  - `hard_gates` — binary pass/fail, BLOCK render (max_pages, single_column, required_sections,
+    banned_phrases, contact_in_body, no_fact_outside_core).
+  - `soft_rubric` — weighted 0-100 score, advisory (bullets_have_metrics, xyz_formula,
+    jd_keyword_coverage, seniority_verbs_frontloaded).
+
+The check step (arc 03) consumes `rules.yaml`; the generator and the human read both.
+
+## Updater
+
+Spec is versioned (`data/spec/CHANGELOG.md`, `version:` in each rules.yaml).
+Update flow: re-run the research tool (lore) → diff vs current spec → human approves → bump version.
+Callback-rate is a COARSE trigger ("time to revisit"), NOT an automatic rule-tuner (low application
+volume → no statistical significance). The apply→callback→tune funnel lives in the merge-loop stage.
+
 ## Boundaries (anti-drift)
 
 - One core, one spec (parameterized); the render is disposable.

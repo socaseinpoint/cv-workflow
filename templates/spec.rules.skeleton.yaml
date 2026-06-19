@@ -1,0 +1,17 @@
+# spec rules skeleton — machine-checkable layer (paired with <level>.md prose)
+# Spec = about the MARKET. Values trace to the prose Anti-patterns / Required sections / Priority signals.
+# This is a CONTRACT for the check step (checkers live in arc 03-merge-loop, not here).
+
+version: 0            # bumped by the updater (see docs)
+
+hard_gates:           # binary pass/fail — BLOCK render
+  max_pages:            # int — hard ceiling (substance decides 1 vs this; see prose)
+  single_column:        # bool
+  contact_in_body:      # bool — not in header/footer (ATS strips those)
+  required_sections: [] # list[str] — must be present, in order
+  banned_phrases: []    # list[str] — filler stems that read as filter-out
+  no_fact_outside_core: # bool — every line rests on core; a number rests on evidence bank
+  acronyms_spelled_once:# bool — "SEO (Search Engine Optimization)" once
+
+soft_rubric:          # 0-100 weighted score — REPORT, does not block
+  # key: weight (int). Each maps to a Priority signal / Keyword mirror item in the prose.

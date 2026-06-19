@@ -33,5 +33,17 @@ Files: `data/spec/master.md`, `data/spec/<title>.md`; company tailoring happens 
 ### What I am not
 <boundaries, so nothing is over-promised — TBD>
 
+## Machine layer (paired file: `<level>.rules.yaml`)
+
+Each level is a PAIR: this prose (human + why) + a `<level>.rules.yaml` with the
+machine-checkable gates extracted from it. See `spec.rules.skeleton.yaml`.
+
+- **hard_gates** ← `Required sections` (+order) · `Anti-patterns` (format traps) · max pages · no-fact-outside-core
+- **soft_rubric** ← `Keyword mirror` · `Priority signals` · `Message` (scored 0-100, advisory)
+- **What I am not** stays prose-only (boundaries, anti-overclaim).
+
+Why yaml here but markdown for the core: core specifics become fabrication hooks; spec
+*gates* are not hooks — they are machine-checkable by nature. Different layer, different rule.
+
 ---
 *Sources for content: the research tool (in progress) + prior CV principles / intent / market research.*
