@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>cv-workflow — a résumé that doesn't fabricate</title>
+<meta name="description" content="cv-workflow builds a résumé as the intersection of what's true about you and what the market wants — with traceability and machine-checked gates. No invented metrics, no ATS-broken layouts. Rendering is a separate stdlib engine." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css?v=1" />
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><b>/</b>cv-workflow</a>
+    <nav class="nav-right" aria-label="Main navigation">
+      <span class="nav-links">
+        <a href="#start">start</a>
+        <a href="https://github.com/socaseinpoint/cv-workflow#readme" target="_blank" rel="noopener">docs</a>
+      </span>
+      <a href="https://github.com/socaseinpoint/cv-workflow" target="_blank" rel="noopener">github ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="mono reveal">§ 00 — fact-traced · spec-checked · no fabrication</span>
+      <h1 class="reveal">A résumé that's the <em>intersection</em> of what's true and what the market wants.</h1>
+      <p class="lead reveal">
+        <code>cv-workflow</code> keeps three things apart — <b>CORE</b> (what you actually did),
+        <b>SPEC</b> (what a résumé should be, from verified research), and the render. It intersects
+        them into one <code>cv.json</code>, then <b>machine-checks every gate</b> before a PDF exists.
+        No invented metrics. No keyword-stuffed, ATS-broken layout.
+      </p>
+      <div class="actions reveal">
+        <a href="#start" class="bracket bracket--primary">[ get started → ]</a>
+        <a href="https://github.com/socaseinpoint/cv-workflow#readme" target="_blank" rel="noopener" class="bracket">[ read the docs ]</a>
+        <a href="https://github.com/socaseinpoint/ats-cv-generator" target="_blank" rel="noopener" class="bracket">[ render engine ↗ ]</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE → AFTER -->
+  <section class="contrast">
+    <div class="wrap reveal">
+      <p class="band-head">§ 00b — the moment it pays off · a polished résumé that quietly sinks you</p>
+      <div class="contrast-grid">
+        <div class="cc">
+          <span class="tag">without cv-workflow</span>
+          <h3>A slick AI résumé. Half of it is invented or unreadable by the ATS.</h3>
+<pre class="scene"><span class="k">you →</span> "write me a senior résumé"
+<span class="k">tool →</span> two-column PDF, fabricated metrics, keyword-stuffed
+<span class="c"># multi-column breaks parsing · "p95 87ms" you can't back · filler verbs</span>
+<span class="k">you →</span> send it · get ghosted · never know why</pre>
+          <p class="takeaway">Pretty, generic, and risky: a metric you can't defend in the interview, a layout the parser scrambles, phrasing recruiters filter on sight.</p>
+        </div>
+        <div class="cc relief">
+          <span class="tag">with cv-workflow</span>
+          <h3>Every line <em>traces to a fact</em>. Every gate <em>checked</em> before render.</h3>
+<pre class="scene"><span class="k">you →</span> core × spec → cv.json
+<span class="a">check →</span> hard gates: single-column · no banned phrases · contact in body
+<span class="a">check →</span> soft rubric: metrics · XYZ · seniority signals  <span class="c"># 0-100</span>
+<span class="k">you →</span> render only if it passes · a CV you can defend</pre>
+          <p class="takeaway">No fact in the CV that isn't in your core; a number lives in the evidence bank with provenance. The spec comes from adversarially-verified market research, not vibes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IT IS -->
+  <section id="what">
+    <div class="wrap block">
+      <div class="head reveal">
+        <div class="num">§ 01</div>
+        <div>
+          <h2>What it is, in one breath.</h2>
+          <div class="sub">Ingredients × recipe → the dish. Core is truth, spec is the market, render is disposable.</div>
+        </div>
+      </div>
+      <div class="body-grid reveal">
+        <div></div>
+        <div>
+          <p class="prose">
+            <code>cv-workflow</code> is a system, not a one-shot prompt. <b>CORE</b> holds general,
+            stable truth about you — no numbers, append-only, so specifics never become fabrication
+            hooks. <b>SPEC</b> describes what a résumé should be right now — derived from verified
+            research, hybrid prose + machine-checkable rules, parameterized by target
+            (<code>@master → @title → @company</code>). The generator intersects them into the
+            engine's <code>cv.json</code>; <code>check.py</code> enforces the spec's gates; rendering
+            to PDF is a <em>separate</em>, dependency-free engine. The render is a throwaway artifact —
+            re-generated, never hand-edited.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE LAYERS -->
+  <section id="layers">
+    <div class="wrap block">
+      <div class="head reveal">
+        <div class="num">§ 02</div>
+        <div>
+          <h2>Three layers, kept apart.</h2>
+          <div class="sub">Mixing them is how résumés drown in overclaim.</div>
+        </div>
+      </div>
+      <div class="concepts reveal">
+        <div class="concept">
+          <span class="tag">core</span>
+          <h3>Truth about you</h3>
+          <p>General anchors, markdown, append-only, <em>no numbers</em>. Stable — it doesn't know about the market. Specifics become invention hooks, so they stay out.</p>
+        </div>
+        <div class="concept">
+          <span class="tag">spec</span>
+          <h3>What the market wants</h3>
+          <p>What a résumé should be now — from verified research. Prose + <code>rules.yaml</code> gates. Moves with the market, not with you.</p>
+        </div>
+        <div class="concept">
+          <span class="tag">evidence bank</span>
+          <h3>Backed specifics</h3>
+          <p>Confirmed numbers/details with provenance. Grows per application, reused — so a metric is asked once and never invented.</p>
+        </div>
+        <div class="concept">
+          <span class="tag">gap = spec − core</span>
+          <h3>A roadmap, free</h3>
+          <p>What the spec wants that your core lacks. Read two ways: what to surface in the CV, and what to learn or build next.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why">
+    <div class="wrap block">
+      <div class="head reveal">
+        <div class="num">§ 03</div>
+        <div>
+          <h2>Why it matters.</h2>
+          <div class="sub">Three payoffs — one line each.</div>
+        </div>
+      </div>
+      <div class="why reveal">
+        <div class="reason">
+          <span class="rk">// nothing is fabricated</span>
+          <p>No fact in the CV that isn't in your core; every number rests on the evidence bank with provenance. You can defend every line in the room — because you lived it.</p>
+        </div>
+        <div class="reason">
+          <span class="rk">// the spec is researched, not guessed</span>
+          <p>What "good" means comes from adversarially-verified market research (ATS parsing, recruiter scan, the 2026 stack) — folklore and vendor-funded numbers filtered out, not copied in.</p>
+        </div>
+        <div class="reason">
+          <span class="rk">// gates run before a PDF exists</span>
+          <p><code>check.py</code> hard-blocks ATS traps (multi-column, header contacts, filler phrases) and scores a 0-100 rubric (metrics, XYZ, seniority signals). Render only if it passes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW / START -->
+  <section id="start">
+    <div class="wrap block">
+      <div class="head reveal">
+        <div class="num">§ 04</div>
+        <div>
+          <h2>Generate → check → render → loop.</h2>
+          <div class="sub">A pipeline you re-run per role — each step is inspectable, the answer is yours.</div>
+        </div>
+      </div>
+
+      <div class="body-grid reveal">
+        <div></div>
+        <div>
+          <figure>
+            <div class="figcap"><span>one run — the flow</span><span>start</span></div>
+<pre class="scene"><span class="k">you →</span> collect core once: gap.py shows what the spec wants you lack
+<span class="a">gen →</span> core × spec@title → cv.json   <span class="c"># every line traces to a fact</span>
+<span class="a">check →</span> hard gates pass? soft score? (e.g. 85/100)
+<span class="a">render →</span> cv.json → PDF   <span class="c"># separate stdlib engine, single-column, ATS-clean</span>
+<span class="k">loop →</span> apply · track callback-rate · refresh the spec</pre>
+          </figure>
+          <p class="prose dim">
+            The CV is the intersection of your facts and a researched spec — checked before it
+            renders. Tailoring to a title or a specific JD is a light pass over the same
+            <code>cv.json</code>. Re-render any time; never hand-edit the PDF.
+          </p>
+        </div>
+      </div>
+
+      <div class="body-grid reveal" style="margin-top:2.4rem;">
+        <div></div>
+        <div>
+<pre><span class="c"># the system (workflow) + the render engine (separate, stdlib-only)</span>
+git clone https://github.com/socaseinpoint/cv-workflow
+git clone https://github.com/socaseinpoint/ats-cv-generator
+<span class="c"># your facts live in data/ — never committed</span>
+python3 check.py data/master.cv.json data/spec/fullstack-ts.rules.yaml
+python3 ../ats-cv-generator/render.py data/master.cv.json -o data/out/cv.pdf</pre>
+          <p class="prose dim">
+            Built on the <a class="inline-link" href="https://github.com/socaseinpoint/arcs" target="_blank" rel="noopener">arcs</a>
+            method and driven inside Claude Code. Your personal data stays in <code>data/</code>,
+            out of git — the system is public, your facts are not.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HONEST FRAMING -->
+  <section id="honest">
+    <div class="wrap block">
+      <div class="head reveal">
+        <div class="num">§ 05</div>
+        <div>
+          <h2>It separates the parts on purpose.</h2>
+          <div class="sub">Truth, market, and rendering are different jobs — so each stays honest.</div>
+        </div>
+      </div>
+      <div class="body-grid reveal">
+        <div></div>
+        <div>
+          <p class="prose">
+            Plenty of tools will write you a résumé in one shot. <b>cv-workflow doesn't.</b> It keeps
+            your truth (core) away from the market (spec) away from the pixels (render), so no layer
+            can quietly corrupt another:
+          </p>
+          <p class="prose dim">
+            <b>core stays general</b> so numbers can't become invention hooks · <b>spec is verified
+            research</b> with machine-checkable gates, not opinion · <b>render is a separate
+            stdlib engine</b> (<a class="inline-link" href="https://github.com/socaseinpoint/ats-cv-generator" target="_blank" rel="noopener">ats-cv-generator</a>) — a disposable PDF, never the source of truth. Needs Claude Code + the
+            <a class="inline-link" href="https://github.com/socaseinpoint/arcs" target="_blank" rel="noopener">arcs</a> method. <a class="inline-link" href="https://github.com/socaseinpoint/cv-workflow#readme" target="_blank" rel="noopener">See the docs.</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSER -->
+  <section>
+    <div class="wrap closer reveal">
+      <h2>Core × spec → check → a CV you can <em>defend</em>.</h2>
+      <p>Open source. Your facts stay yours; the render is disposable; nothing is invented.</p>
+      <div class="actions">
+        <a href="#start" class="bracket bracket--primary">[ get started → ]</a>
+        <a href="https://github.com/socaseinpoint/cv-workflow" target="_blank" rel="noopener" class="bracket">[ github ↗ ]</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="mono">cv-workflow · résumé as truth × market, with checked gates</span>
+    <span class="foot-links">
+      <a href="https://github.com/socaseinpoint/cv-workflow#readme" target="_blank" rel="noopener" class="mono">docs</a>
+      <a href="https://github.com/socaseinpoint/ats-cv-generator" target="_blank" rel="noopener" class="mono">engine ↗</a>
+      <a href="https://github.com/socaseinpoint/arcs" target="_blank" rel="noopener" class="mono">arcs ↗</a>
+    </span>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

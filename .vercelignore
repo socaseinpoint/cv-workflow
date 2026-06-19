@@ -1,0 +1,6 @@
+# Vercel deploys ONLY the static landing in docs/.
+# Exclude the Python tooling so Vercel doesn't auto-detect a Python runtime.
+*.py
+tests/
+requirements.txt
+data/
