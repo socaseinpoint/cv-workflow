@@ -1,0 +1,7 @@
+# YOUR content — never commit personal data
+data/
+*.cv.json
+cv.json
+
+# os / editor
+.DS_Store
