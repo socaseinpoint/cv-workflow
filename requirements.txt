@@ -1,0 +1,4 @@
+# cv-workflow tooling deps (the render engine cv-generator is stdlib-only and separate)
+pyyaml>=6.0      # check.py — parse spec rules.yaml
+pypdf>=4.0       # check.py — count PDF pages for the max_pages gate (optional; gate SKIPs if absent)
+pytest>=7.0      # tests

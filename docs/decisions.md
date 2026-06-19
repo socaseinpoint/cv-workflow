@@ -30,3 +30,9 @@ Why it's built this way. One line per turn.
 - **Two-tier enforcement.** `hard_gates` block render (binary); `soft_rubric` scores 0-100 (advisory).
 - **Updater = versioning + research-refresh, human-approved.** Re-run research → diff → approve →
   bump. Callback-rate is a coarse trigger, not an auto-tuner (volume too low for significance).
+- **CHECK is code; MERGE is LLM judgment.** `check.py` deterministically enforces `rules.yaml`
+  (hard_gates block, soft_rubric scores 0-100); the facts×spec merge is an LLM task with a code
+  harness around it (load/validate/check). Metric & action-verb heuristics ported from the
+  MIT-licensed sunnypatell/ats-screener + canonical career-center verb lists.
+- **max_pages is a render-time gate.** Counted from the produced PDF via pypdf (naive `/Type /Page`
+  regex is unsafe on Chrome-generated PDFs); SKIPPED gracefully if pypdf is absent.
